@@ -79,7 +79,17 @@ console.log(getAllKinds(animals))
   ];
  * filterByCountMinimum([], 3); //> [] // returns empty array if input array is empty
  */
-function filterByCountMinimum(animals, minimum) {}
+function filterByCountMinimum(animals, minimum) {
+  let equalCount = []
+  for (let i = 0; i < animals.length; i++) {
+    const animal = animals[i];
+    if (animal.minimum === minimum) {
+      equalCount.push(animal);
+    }
+  }
+  return equalCount
+}
+//console.log(filterByCountMinimum(animals, "horse"))
 
 /**
  * FUNCTION DESCRIPTION
