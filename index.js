@@ -49,7 +49,18 @@ console.log(getTotalCount(animals))
  * getAllKinds([]); //> [] // returns empty array if input array is empty
  */
 function getAllKinds(animals) {
+  let animalNames = [];
+    for (let i = 0; i < animals.length; i++) {
+      const animal = animals[i];
+    if (i === animals.length - 1) {
+      animalNames = animalNames + animal.kind;
+    }
+    else {animalNames = animalNames + animal.kind + ' , ';
+    }
+  }
+  return animalNames;
 }
+console.log(getAllKinds(animals))
 
 /**
  * FUNCTION DESCRIPTION
